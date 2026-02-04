@@ -17,14 +17,19 @@ function createTempDir(): string {
   return fs.mkdtempSync(path.join(os.tmpdir(), "firewall-approvals-"));
 }
 
-function createState(stateDir: string, log: "safe" | "debug", injectionMode: "alert" | "block" = "alert"): FirewallState {
+function createState(
+  stateDir: string,
+  log: "safe" | "debug",
+  injectionMode: "alert" | "block" = "alert",
+  redaction: Policy["defaults"]["redaction"] = "standard"
+): FirewallState {
   const policy: Policy = {
     mode: "standard",
     defaults: {
       denyUnknownTools: true,
       unknownToolAction: "DENY",
       log,
-      redaction: "standard",
+      redaction,
       injection: { mode: injectionMode }
     },
     risk: {
@@ -113,6 +118,23 @@ describe("approval lifecycle", () => {
 
     const debugLast = readLastDecision(debugDir);
     expect((debugLast?.metadata as Record<string, unknown> | undefined)?.paramsPreview).toBeTypeOf("string");
+  });
+
+  it("redacts previews even when redaction is off", async () => {
+    const debugDir = createTempDir();
+    const debugState = createState(debugDir, "debug", "alert", "off");
+    const secret = "sk-abcdefghijklmnopqrstuvwxyz012345";
+
+    await handleBeforeToolCall(
+      debugState,
+      { toolName: "write", params: { path: "/tmp/file.txt", token: secret } },
+      { toolName: "write", sessionKey: "session-4" }
+    );
+
+    const store = loadApprovalStore(debugDir);
+    const preview = store.requests[0]?.paramsPreview ?? "";
+    expect(preview).not.toContain(secret);
+    expect(preview).toContain("REDACTED:openai_key");
   });
 
   it("keeps tool identifiers on blocked tool results", () => {

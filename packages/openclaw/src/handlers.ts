@@ -278,11 +278,16 @@ function redactParamsPreview(
       return sha256Hex(fallback);
     }
   };
-  if (!shouldRedact || redactionMode === "off") {
-    const preview = truncate(safePreview(params), 500);
-    return { preview, paramsHash: safeHash(params), redactionReport: { redacted: false, matches: [] } };
+  // Always keep approval/log previews redacted or masked; never store raw secrets.
+  if (!shouldRedact) {
+    return {
+      preview: "[redacted]",
+      paramsHash: safeHash(params),
+      redactionReport: { redacted: false, matches: [] }
+    };
   }
-  const redaction = redactValue(params, { mode: redactionMode });
+  const effectiveMode: RedactionMode = redactionMode === "off" ? "standard" : redactionMode;
+  const redaction = redactValue(params, { mode: effectiveMode });
   const preview = truncate(safePreview(redaction.redacted), 500);
   return { preview, paramsHash: safeHash(redaction.redacted), redactionReport: redaction.report };
 }

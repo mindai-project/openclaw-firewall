@@ -24,9 +24,12 @@
     }
   },
   "dependencies": {
-    "@clack/prompts": "^1.0.0",
+    "@clack/prompts": "1.0.0",
     "commander": "11.1.0",
-    "yaml": "2.4.2"
+    "yaml": "2.4.2",
+    "@mindai/firewall-core": "0.1.0",
+    "@mindai/firewall-redaction": "0.1.0",
+    "@mindai/firewall-scanner": "0.1.0"
   },
   "devDependencies": {}
 }

@@ -17,14 +17,14 @@
 - `risk`: `read`, `write`, `critical`, `unknown`.
 - `action`: `ALLOW`, `DENY`, or `ASK`.
 - `allow`: `true`, `false`, `ask`, or `deny` (alias of `action`).
-- `redactParams`: boolean.
+- `redactParams`: boolean. If false, approval/log previews are stored as `[redacted]` (raw params are never logged).
 - `redactResult`: boolean.
 - `scanInjection`: boolean.
 - `useExecApprovals`: boolean (exec tool only).
 - `allowPaths`: list of allowed filesystem path prefixes (write/read/edit/apply_patch).
 - `pathAction`: `ALLOW`, `DENY`, or `ASK` when path is outside allowPaths (default: `ASK`).
 
-Note: if `defaults.redaction` is set to `off`, redaction is disabled even if a tool rule sets `redactParams`/`redactResult` to `true`.
+Note: if `defaults.redaction` is set to `off`, redaction is disabled for tool inputs/outputs, but logs and approval previews still apply at least `standard` redaction to avoid storing raw secrets.
 
 ## Preset example
 
