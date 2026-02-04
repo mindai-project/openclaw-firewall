@@ -2,8 +2,8 @@ import fs from "node:fs";
 import path from "node:path";
 import os from "node:os";
 import { parse as parseYaml } from "yaml";
-import type { Decision, InjectionMode, LogLevel, Policy, RedactionMode, ToolRule } from "@mindai/firewall-core";
-import { normalizeToolName } from "@mindai/firewall-core";
+import type { Decision, InjectionMode, LogLevel, Policy, RedactionMode, ToolRule } from "@mindaiproject/firewall-core";
+import { normalizeToolName } from "@mindaiproject/firewall-core";
 
 export type PresetName = "strict" | "standard" | "dev";
 

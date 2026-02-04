@@ -19,7 +19,7 @@ import {
   type Policy,
   type Risk,
   type ToolRule
-} from "@mindai/firewall-core";
+} from "@mindaiproject/firewall-core";
 import { getDefaultPolicyPath, loadPolicyConfig, loadPresetPolicyOnly, type PresetName } from "./config.js";
 import {
   applyFirewallConfig,
@@ -701,7 +701,7 @@ async function configureInstaller(
     steps: [
       {
         label: "Install plugin",
-        command: "openclaw plugins install @mindai/openclaw-tool-firewall"
+        command: "openclaw plugins install @mindaiproject/openclaw-tool-firewall"
       },
       {
         label: "Enable plugin",

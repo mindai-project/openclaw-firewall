@@ -24,7 +24,7 @@ If `openclaw firewall` is missing, OpenClaw did not load the plugin CLI.
 Use the standalone CLI and confirm OpenClaw is reading the same config path:
 
 ```bash
-npm install -g @mindai/openclaw-tool-firewall
+npm install -g @mindaiproject/openclaw-tool-firewall
 mindai-firewall setup --config /path/to/openclaw.json
 openclaw plugins list --enabled
 ```

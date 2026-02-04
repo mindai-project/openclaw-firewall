@@ -1,11 +1,11 @@
 {
-  "name": "@mindai/openclaw-tool-firewall",
+  "name": "@mindaiproject/openclaw-tool-firewall",
   "version": "0.1.0",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
-    "mindai-firewall": "./dist/mindai-firewall.js"
+    "mindai-firewall": "dist/mindai-firewall.js"
   },
   "files": [
     "dist",
@@ -27,9 +27,9 @@
     "@clack/prompts": "1.0.0",
     "commander": "14.0.3",
     "yaml": "2.8.2",
-    "@mindai/firewall-core": "0.1.0",
-    "@mindai/firewall-redaction": "0.1.0",
-    "@mindai/firewall-scanner": "0.1.0"
+    "@mindaiproject/firewall-core": "0.1.0",
+    "@mindaiproject/firewall-redaction": "0.1.0",
+    "@mindaiproject/firewall-scanner": "0.1.0"
   },
   "devDependencies": {}
 }

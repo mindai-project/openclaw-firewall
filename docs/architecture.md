@@ -4,10 +4,10 @@ This document explains how the MindAI Tool Firewall is put together and how data
 
 ## Core Components
 
-- Policy engine (`@mindai/firewall-core`): deterministic allow/deny/ask decisions and tool rule normalization.
-- Redaction (`@mindai/firewall-redaction`): masks secrets in tool inputs/outputs before logging or persistence.
-- Injection scanner (`@mindai/firewall-scanner`): detects prompt-injection patterns in tool output.
-- OpenClaw adapter (`@mindai/openclaw-tool-firewall`): hook integration, approvals, receipts, setup wizard.
+- Policy engine (`@mindaiproject/firewall-core`): deterministic allow/deny/ask decisions and tool rule normalization.
+- Redaction (`@mindaiproject/firewall-redaction`): masks secrets in tool inputs/outputs before logging or persistence.
+- Injection scanner (`@mindaiproject/firewall-scanner`): detects prompt-injection patterns in tool output.
+- OpenClaw adapter (`@mindaiproject/openclaw-tool-firewall`): hook integration, approvals, receipts, setup wizard.
 
 ## Data Flow
 

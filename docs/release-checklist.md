@@ -12,10 +12,10 @@ Use this checklist before publishing to npm.
    - `packages/redaction/package.json`
    - `packages/scanner/package.json`
 3. Update internal dependency pins to the same version:
-   - `@mindai/firewall-core`
-   - `@mindai/firewall-redaction`
-   - `@mindai/firewall-scanner`
-   - `@mindai/openclaw-tool-firewall`
+   - `@mindaiproject/firewall-core`
+   - `@mindaiproject/firewall-redaction`
+   - `@mindaiproject/firewall-scanner`
+   - `@mindaiproject/openclaw-tool-firewall`
 
 ## 2) Preflight checks
 

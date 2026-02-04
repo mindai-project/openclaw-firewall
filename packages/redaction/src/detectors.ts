@@ -1,5 +1,5 @@
-import { sha256Hex, type RedactionMode } from "@mindai/firewall-core";
-import type { RedactionMatch, RedactionReport } from "@mindai/firewall-core";
+import { sha256Hex, type RedactionMode } from "@mindaiproject/firewall-core";
+import type { RedactionMatch, RedactionReport } from "@mindaiproject/firewall-core";
 
 export type RedactionResult = {
   redacted: string;

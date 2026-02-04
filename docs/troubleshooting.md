@@ -76,7 +76,7 @@ If the plugin is missing, run the standalone wizard and point it at the
 OpenClaw config you actually use:
 
 ```bash
-npm install -g @mindai/openclaw-tool-firewall
+npm install -g @mindaiproject/openclaw-tool-firewall
 mindai-firewall setup --config /path/to/openclaw.json
 ```
 
@@ -100,7 +100,7 @@ openclaw firewall setup --plugin-path ~/.openclaw/extensions/openclaw-tool-firew
 If the plugin is installed via npm in the OpenClaw repo, use:
 
 ```bash
-openclaw firewall setup --plugin-path /home/openclaw/node_modules/@mindai/openclaw-tool-firewall
+openclaw firewall setup --plugin-path /home/openclaw/node_modules/@mindaiproject/openclaw-tool-firewall
 ```
 
 ## Wizard prompts hang in CI or scripts

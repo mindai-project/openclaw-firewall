@@ -18,14 +18,14 @@ Privacy- and safety-first firewall for OpenClaw tool execution. It adds determin
 Install the CLI via npm (recommended):
 
 ```bash
-npm install -g @mindai/openclaw-tool-firewall
+npm install -g @mindaiproject/openclaw-tool-firewall
 mindai-firewall setup
 ```
 
 Or install through OpenClaw:
 
 ```bash
-openclaw plugins install @mindai/openclaw-tool-firewall
+openclaw plugins install @mindaiproject/openclaw-tool-firewall
 openclaw plugins enable openclaw-tool-firewall
 openclaw firewall setup
 ```
@@ -67,10 +67,10 @@ See `docs/policies.md` for the schema and examples.
 
 ## Architecture
 
-- `@mindai/firewall-core` policy engine
-- `@mindai/firewall-redaction` detectors + masking
-- `@mindai/firewall-scanner` injection detection
-- `@mindai/openclaw-tool-firewall` OpenClaw adapter + approvals + wizard
+- `@mindaiproject/firewall-core` policy engine
+- `@mindaiproject/firewall-redaction` detectors + masking
+- `@mindaiproject/firewall-scanner` injection detection
+- `@mindaiproject/openclaw-tool-firewall` OpenClaw adapter + approvals + wizard
 
 More detail: `docs/architecture.md`.
 

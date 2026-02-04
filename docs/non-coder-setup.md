@@ -7,7 +7,7 @@ This guide is for people who want the safest path with minimal terminal work.
 1. Install and enable the plugin:
 
 ```bash
-openclaw plugins install @mindai/openclaw-tool-firewall
+openclaw plugins install @mindaiproject/openclaw-tool-firewall
 openclaw plugins enable openclaw-tool-firewall
 ```
 
@@ -65,6 +65,6 @@ Pick:
 The plugin CLI wasn’t loaded. Use the standalone CLI instead:
 
 ```bash
-npm install -g @mindai/openclaw-tool-firewall
+npm install -g @mindaiproject/openclaw-tool-firewall
 mindai-firewall setup
 ```

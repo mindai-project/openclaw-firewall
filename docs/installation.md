@@ -3,7 +3,7 @@
 ## 1) Install the plugin
 
 ```bash
-openclaw plugins install @mindai/openclaw-tool-firewall
+openclaw plugins install @mindaiproject/openclaw-tool-firewall
 ```
 
 ## 2) Enable the plugin
@@ -91,14 +91,14 @@ openclaw firewall setup --preset standard
 Standalone CLI setup (included in the main package):
 
 ```bash
-npm install -g @mindai/openclaw-tool-firewall
+npm install -g @mindaiproject/openclaw-tool-firewall
 mindai-firewall setup
 ```
 
 Standalone installer:
 
 ```bash
-npm install -g @mindai/openclaw-tool-firewall
+npm install -g @mindaiproject/openclaw-tool-firewall
 mindai-firewall install
 ```
 
@@ -118,7 +118,7 @@ openclaw firewall init --preset standard
 Standalone CLI (included in the main package):
 
 ```bash
-npm install -g @mindai/openclaw-tool-firewall
+npm install -g @mindaiproject/openclaw-tool-firewall
 mindai-firewall init --preset standard
 ```
 

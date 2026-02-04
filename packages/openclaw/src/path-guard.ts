@@ -1,5 +1,5 @@
 import path from "node:path";
-import { normalizeToolName } from "@mindai/firewall-core";
+import { normalizeToolName } from "@mindaiproject/firewall-core";
 
 export type PathGuardResult = {
   allowed: boolean;

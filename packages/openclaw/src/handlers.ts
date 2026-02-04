@@ -1,8 +1,8 @@
-import { buildPolicyIndex, evaluatePolicy, normalizeToolName, type FirewallDecision, type NormalizedToolRule } from "@mindai/firewall-core";
-import { hashObject, sha256Hex, stableStringify } from "@mindai/firewall-core";
-import type { Decision, Policy, Receipt, ToolCall, RedactionMode } from "@mindai/firewall-core";
-import { redactValue } from "@mindai/firewall-redaction";
-import { scanText } from "@mindai/firewall-scanner";
+import { buildPolicyIndex, evaluatePolicy, normalizeToolName, type FirewallDecision, type NormalizedToolRule } from "@mindaiproject/firewall-core";
+import { hashObject, sha256Hex, stableStringify } from "@mindaiproject/firewall-core";
+import type { Decision, Policy, Receipt, ToolCall, RedactionMode } from "@mindaiproject/firewall-core";
+import { redactValue } from "@mindaiproject/firewall-redaction";
+import { scanText } from "@mindaiproject/firewall-scanner";
 import type {
   OpenClawPluginApi,
   PluginHookBeforeToolCallEvent,

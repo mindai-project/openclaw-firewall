@@ -9,7 +9,7 @@ Full non-coder guide: `docs/non-coder-setup.md`.
 1. Install and enable the plugin:
 
 ```bash
-openclaw plugins install @mindai/openclaw-tool-firewall
+openclaw plugins install @mindaiproject/openclaw-tool-firewall
 openclaw plugins enable openclaw-tool-firewall
 ```
 

@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import os from "node:os";
-import type { Receipt } from "@mindai/firewall-core";
+import type { Receipt } from "@mindaiproject/firewall-core";
 
 export type ApprovalScope = "once" | "session";
 export type ApprovalStatus = "pending" | "approved" | "denied";

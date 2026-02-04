@@ -18,9 +18,9 @@ export default defineConfig({
   clean: false,
   dts: false,
   noExternal: [
-    "@mindai/firewall-core",
-    "@mindai/firewall-redaction",
-    "@mindai/firewall-scanner"
+    "@mindaiproject/firewall-core",
+    "@mindaiproject/firewall-redaction",
+    "@mindaiproject/firewall-scanner"
   ],
   external: ["yaml", "commander", "@clack/prompts"],
   outDir: path.join(packageDir, "dist")

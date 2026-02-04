@@ -4,7 +4,7 @@ import path from "node:path";
 import { createRequire } from "node:module";
 import { fileURLToPath } from "node:url";
 import yaml from "yaml";
-import type { Policy } from "@mindai/firewall-core";
+import type { Policy } from "@mindaiproject/firewall-core";
 import { getDefaultPolicyPath, type PresetName } from "./config.js";
 import type { RateLimitRule } from "./rate-limit.js";
 
@@ -141,7 +141,7 @@ export function resolvePluginEntrypoint(explicitPath?: string): string | null {
   try {
     const require = createRequire(import.meta.url);
     // Resolve package root via package.json to avoid export map restrictions.
-    const pkgPath = require.resolve("@mindai/openclaw-tool-firewall/package.json");
+    const pkgPath = require.resolve("@mindaiproject/openclaw-tool-firewall/package.json");
     const pkgDir = path.dirname(pkgPath);
     if (fs.existsSync(pkgDir)) {
       return pkgDir;
@@ -242,7 +242,7 @@ export function applyFirewallConfig(
       return false;
     }
     const normalized = path.normalize(entry);
-    if (!normalized.includes("@mindai/openclaw-tool-firewall")) {
+    if (!normalized.includes("@mindaiproject/openclaw-tool-firewall")) {
       return true;
     }
     return normalized === normalizedPluginPath;

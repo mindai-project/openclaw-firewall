@@ -1,4 +1,4 @@
-import { normalizeToolName, type Decision } from "@mindai/firewall-core";
+import { normalizeToolName, type Decision } from "@mindaiproject/firewall-core";
 
 export type RateLimitScope = "session" | "global";
 

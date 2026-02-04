@@ -9,12 +9,12 @@ describe("firewall setup helpers", () => {
 
   it("updates plugin load paths and entry config", () => {
     const pluginPath =
-      "/home/openclaw/node_modules/@mindai/openclaw-tool-firewall/dist/mindai-openclaw-tool-firewall.js";
+      "/home/openclaw/node_modules/@mindaiproject/openclaw-tool-firewall/dist/mindai-openclaw-tool-firewall.js";
     const config = {
       plugins: {
         load: {
           paths: [
-            "/home/openclaw/node_modules/@mindai/openclaw-tool-firewall",
+            "/home/openclaw/node_modules/@mindaiproject/openclaw-tool-firewall",
             "/home/openclaw/extensions/other/index.js"
           ]
         },
@@ -38,7 +38,7 @@ describe("firewall setup helpers", () => {
     const paths = (applied.config.plugins as { load?: { paths?: string[] } }).load?.paths ?? [];
     expect(paths).toContain(pluginPath);
     expect(paths).toContain("/home/openclaw/extensions/other/index.js");
-    expect(paths).not.toContain("/home/openclaw/node_modules/@mindai/openclaw-tool-firewall");
+    expect(paths).not.toContain("/home/openclaw/node_modules/@mindaiproject/openclaw-tool-firewall");
 
     const entry = (applied.config.plugins as { entries?: Record<string, unknown> }).entries?.[
       "openclaw-tool-firewall"

@@ -1,4 +1,4 @@
-import type { RedactionReport } from "@mindai/firewall-core";
+import type { RedactionReport } from "@mindaiproject/firewall-core";
 import { redactString, type RedactionOptions } from "./detectors.js";
 
 export type RedactValueResult = {

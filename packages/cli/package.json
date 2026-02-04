@@ -1,11 +1,11 @@
 {
-  "name": "@mindai/openclaw-tool-firewall-cli",
+  "name": "@mindaiproject/openclaw-tool-firewall-cli",
   "version": "0.1.0",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
-    "mindai-firewall": "./bin/mindai-firewall.js"
+    "mindai-firewall": "bin/mindai-firewall.js"
   },
   "files": [
     "dist",
@@ -18,7 +18,7 @@
     }
   },
   "dependencies": {
-    "@mindai/openclaw-tool-firewall": "0.1.0",
+    "@mindaiproject/openclaw-tool-firewall": "0.1.0",
     "commander": "11.1.0"
   }
 }

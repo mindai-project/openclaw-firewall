@@ -1,5 +1,5 @@
 {
-  "name": "@mindai/firewall-scanner",
+  "name": "@mindaiproject/firewall-scanner",
   "version": "0.1.0",
   "type": "module",
   "main": "./dist/index.js",
@@ -14,6 +14,6 @@
     }
   },
   "dependencies": {
-    "@mindai/firewall-core": "0.1.0"
+    "@mindaiproject/firewall-core": "0.1.0"
   }
 }
