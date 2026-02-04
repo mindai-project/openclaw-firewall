@@ -1,0 +1,25 @@
+{
+  "name": "mindai-openclaw-tool-firewall",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "bundle": "tsup --config packages/openclaw/tsup.config.ts && node packages/openclaw/scripts/copy-manifest.mjs",
+    "clean": "tsc -b --clean",
+    "release": "npm run build && npm run bundle",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@types/node": "20.19.0",
+    "tsup": "8.5.1",
+    "typescript": "5.9.2",
+    "vitest": "4.0.7"
+  },
+  "overrides": {
+    "esbuild": "0.27.2"
+  }
+}

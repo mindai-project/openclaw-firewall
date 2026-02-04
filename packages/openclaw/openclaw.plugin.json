@@ -1,0 +1,31 @@
+{
+  "id": "openclaw-tool-firewall",
+  "name": "MindAI Tool Firewall",
+  "description": "Privacy and safety firewall for OpenClaw tool execution.",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "policyPath": { "type": "string" },
+      "preset": { "type": "string", "enum": ["strict", "standard", "dev"] },
+      "maxResultChars": { "type": "number" },
+      "maxResultAction": { "type": "string", "enum": ["truncate", "block"] },
+      "auditOnStart": { "type": "boolean" },
+      "rateLimits": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "toolName": { "type": "string" },
+            "maxCalls": { "type": "number" },
+            "windowSec": { "type": "number" },
+            "action": { "type": "string", "enum": ["ASK", "DENY"] },
+            "scope": { "type": "string", "enum": ["session", "global"] }
+          },
+          "required": ["toolName", "maxCalls", "windowSec"]
+        }
+      }
+    }
+  }
+}

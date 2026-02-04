@@ -1,0 +1,10 @@
+{
+  "files": [],
+  "references": [
+    { "path": "packages/core" },
+    { "path": "packages/redaction" },
+    { "path": "packages/scanner" },
+    { "path": "packages/openclaw" },
+    { "path": "packages/cli" }
+  ]
+}

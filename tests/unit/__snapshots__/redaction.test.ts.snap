@@ -1,0 +1,14 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`redaction > redacts common sensitive patterns 1`] = `"Email [REDACTED:email:973dfe46] IP [REDACTED:ip:37d7a806] Authorization: [REDACTED:auth:413f2702] [REDACTED:eth_address:52678a02]"`;
+
+exports[`redaction > redacts nested values 1`] = `
+{
+  "nested": [
+    "[REDACTED:email:b4c9a289]",
+  ],
+  "token": "[REDACTED:stripe_key:9e615fde]",
+}
+`;
+
+exports[`redaction > redacts seed-phrase-like content 1`] = `"alpha beta gamma delta epsilon zeta eta theta iota kappa lambda mu"`;
