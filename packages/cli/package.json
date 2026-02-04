@@ -19,6 +19,6 @@
   },
   "dependencies": {
     "@mindaiproject/openclaw-tool-firewall": "0.1.0",
-    "commander": "11.1.0"
+    "commander": "14.0.3"
   }
 }
