@@ -27,9 +27,9 @@
     "@clack/prompts": "1.0.0",
     "commander": "14.0.3",
     "yaml": "2.8.2",
-    "@mindaiproject/firewall-core": "0.1.0",
-    "@mindaiproject/firewall-redaction": "0.1.0",
-    "@mindaiproject/firewall-scanner": "0.1.0"
+    "@mindaiproject/firewall-core": "0.1.1",
+    "@mindaiproject/firewall-redaction": "0.1.1",
+    "@mindaiproject/firewall-scanner": "0.1.1"
   },
   "devDependencies": {}
 }

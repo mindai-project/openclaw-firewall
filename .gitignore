@@ -25,7 +25,3 @@ coverage/
 Thumbs.db
 .idea/
 .vscode/
-
-# Local-only
-AGENTS-TWO.md
-AGENTS.md
